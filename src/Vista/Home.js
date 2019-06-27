@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, ImageBackground } from 'react-native'
+import { View, ImageBackground, ScrollView } from 'react-native'
 import {
     Container, Footer, Button, Text, Icon, Header, Left, Right, Body
     , ListItem, Item, Input, List
@@ -38,12 +38,13 @@ export default class Home extends Component {
                             </Header>
                             <View style={Estilo.ContainerColum}>
                                 <View style={{ height: '50%', justifyContent: 'flex-end', alignItems: 'center' }}>
-                                    <View style={{ backgroundColor: 'white', marginBottom: 10, justifyContent: 'flex-end', alignItems: 'center', borderRadius: 25, paddingHorizontal: 16, width: '80%' }}>
+                                    <View style={{ backgroundColor: 'white',marginLeft:10,marginRight:10,marginTop:20, marginBottom: 10, justifyContent: 'flex-end', alignItems: 'center', borderRadius: 25, paddingHorizontal: 16, width: '80%' }}>
                                         <Item>
+                                            <ScrollView>
                                             <GooglePlacesInput
                                                 Obtener={ (e)=>{ this.props.navigation.navigate('Mapa',{ Destino: [ e ] }); console.log(e, 'Datos obtenidos :v') } }
                                             />
-                                           
+                                             </ScrollView>
                                         </Item>
                                     </View>
                                 </View>

@@ -11,7 +11,8 @@ export default class GooglePlacesInput extends Component {
     super(props);
     this.state = ({
       latitude :'',
-      longitude:''
+      longitude:'',
+      ValorDefecto: ''
     })
   }
 
@@ -31,7 +32,8 @@ export default class GooglePlacesInput extends Component {
       
       this.setState({
         latitude: details.geometry.location.lat,
-        longitude: details.geometry.location.lng, latitudeDelta: 0.3, longitudeDelta: 0.3
+        longitude: details.geometry.location.lng, latitudeDelta: 0.3, longitudeDelta: 0.3,
+        ValorDefecto:''
         
       });
     console.log(this.state.latitude,this.state.longitude)
@@ -40,7 +42,7 @@ export default class GooglePlacesInput extends Component {
        
       }}
 
-      getDefaultValue={() => ''}
+      getDefaultValue={() => this.state.ValorDefecto }
 
       query={{
         // available options: https://developers.google.com/places/web-service/autocomplete
