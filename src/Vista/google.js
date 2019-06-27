@@ -36,7 +36,7 @@ export default class GooglePlacesInput extends Component {
       });
     console.log(this.state.latitude,this.state.longitude)
        
-       
+       this.props.Obtener( { latitude: details.geometry.location.lat, longitude: details.geometry.location.lng } )
        
       }}
 

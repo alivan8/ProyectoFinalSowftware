@@ -40,7 +40,9 @@ export default class Home extends Component {
                                 <View style={{ height: '50%', justifyContent: 'flex-end', alignItems: 'center' }}>
                                     <View style={{ backgroundColor: 'white', marginBottom: 10, justifyContent: 'flex-end', alignItems: 'center', borderRadius: 25, paddingHorizontal: 16, width: '80%' }}>
                                         <Item>
-                                            <GooglePlacesInput/>
+                                            <GooglePlacesInput
+                                                Obtener={ (e)=>{ this.props.navigation.navigate('Mapa',{ Destino: [ e ] }); console.log(e, 'Datos obtenidos :v') } }
+                                            />
                                            
                                         </Item>
                                     </View>
