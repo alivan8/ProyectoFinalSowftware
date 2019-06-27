@@ -7,7 +7,7 @@ import {
 import { Consumer } from '../Modelo/VarGlobales'
 import Estilo from './Styles/Styles';
 import { PiePagina } from './Componentes/ComponentesGenerales'
-
+import GooglePlacesInput from './google'
 
 export default class Home extends Component {
     constructor() {
@@ -40,8 +40,8 @@ export default class Home extends Component {
                                 <View style={{ height: '50%', justifyContent: 'flex-end', alignItems: 'center' }}>
                                     <View style={{ backgroundColor: 'white', marginBottom: 10, justifyContent: 'flex-end', alignItems: 'center', borderRadius: 25, paddingHorizontal: 16, width: '80%' }}>
                                         <Item>
-                                            <Input placeholder={"¿A donde quieres ir?"} />
-                                            <Icon name="ios-search" />
+                                            <GooglePlacesInput/>
+                                           
                                         </Item>
                                     </View>
                                 </View>
